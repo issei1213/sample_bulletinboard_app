@@ -20,23 +20,22 @@
   .col
     .row
       .card.mt-2.w-100
-        .card-header
-          .d-flex.justify-content-start
-            .fisrt-justify-content
-              Quote
-            .secpond-justify-content.ml-3
-              %a.badge.badge-warning{:href => "#"} warning
-              %a.badge.badge-warning{:href => "#"} warning
-              %a.badge.badge-warning{:href => "#"} warning
-
-
-        .card-body
-          %blockquote.blockquote.mb-0
-            .d-flex.justify-content-between
+        - @boards.each do |board|
+          .card-header
+            .d-flex.justify-content-start
               .fisrt-justify-content
-                %p Lorem ipsum dolor sit amet, perjoth]spr]@aejorha@zdfkphs
-                %footer.blockquote-footer
-                  Someone famous in
-                  %cite{:title => "Source Title"} Source Title
-              .secpond-justify-content
-                = link_to "詳細", board_path(1), class: "btn btn-primary text-right"
+                = board.title
+              .secpond-justify-content.ml-3
+                %a.badge.badge-warning{:href => "#"} warning
+                %a.badge.badge-warning{:href => "#"} warning
+                %a.badge.badge-warning{:href => "#"} warning
+          .card-body
+            %blockquote.blockquote.mb-0
+              .d-flex.justify-content-between
+                .fisrt-justify-content
+                  %p
+                    = board.content
+                  %footer.blockquote-footer
+                    = " 投稿者：issei  投稿日：#{board.created_at}"
+                .secpond-justify-content
+                  = link_to "詳細", board_path(1), class: "btn btn-primary text-right"
