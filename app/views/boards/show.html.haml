@@ -1,8 +1,8 @@
 .container
-  .col-12
+  .col
     .row
       .card.w-100.mt-3
-        %h5.card-header
+        .card-header
           .d-flex.justify-content-start
             .fisrt-justify-content
               = @board.title
@@ -15,12 +15,13 @@
               %h5.card-title
                 = @board.content
               %p.card-text
-                = " 投稿者：issei  投稿日：#{l @board.created_at}"
+                = "投稿者：issei  投稿日：#{l @board.created_at}"
             .secpond-justify-content
               = link_to "戻る", root_path, class: "btn btn-primary text-right"
-  .col-12
+  .col
     .row
       .card.w-100.mt-3
         .card-body
           %h5.card-title Card title
           %p.card-text With supporting text below as a natural lead-in to additional content.
+
