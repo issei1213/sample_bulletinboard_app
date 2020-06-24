@@ -5,7 +5,7 @@
         %h5.card-header
           .d-flex.justify-content-start
             .fisrt-justify-content
-              Featured
+              = @board.title
             .secpond-justify-content.ml-3
               %a.badge.badge-warning{:href => "#"} success
               %a.badge.badge-warning{:href => "#"} success
@@ -14,8 +14,10 @@
         .card-body
           .d-flex.justify-content-between
             .fisrt-justify-content
-              %h5.card-title Special title treatment
-              %p.card-text With supporting text below as a natural lead-in to additional content.
+              %h5.card-title
+                = @board.content
+              %p.card-text
+                = " 投稿者：issei  投稿日：#{l @board.created_at}"
             .secpond-justify-content
               = link_to "戻る", root_path, class: "btn btn-primary text-right"
   .col-12

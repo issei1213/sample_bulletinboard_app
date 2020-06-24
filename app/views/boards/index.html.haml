@@ -19,8 +19,8 @@
 .container
   .col
     .row
-      .card.mt-2.w-100
-        - @boards.each do |board|
+      - @boards.each do |board|
+        .card.mt-2.w-100
           .card-header
             .d-flex.justify-content-start
               .fisrt-justify-content
@@ -36,6 +36,6 @@
                   %p
                     = board.content
                   %footer.blockquote-footer
-                    = " 投稿者：issei  投稿日：#{board.created_at}"
+                    = " 投稿者：issei  投稿日：#{l board.created_at}"
                 .secpond-justify-content
-                  = link_to "詳細", board_path(1), class: "btn btn-primary text-right"
+                  = link_to "詳細", board_path(board.id), class: "btn btn-primary text-right"
