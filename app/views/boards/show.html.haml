@@ -2,7 +2,15 @@
   .col-12
     .row
       .card.w-100.mt-3
-        %h5.card-header Featured
+        %h5.card-header
+          .d-flex.justify-content-start
+            .fisrt-justify-content
+              Featured
+            .secpond-justify-content.ml-3
+              %a.badge.badge-warning{:href => "#"} success
+              %a.badge.badge-warning{:href => "#"} success
+              %a.badge.badge-warning{:href => "#"} success
+
         .card-body
           .d-flex.justify-content-between
             .fisrt-justify-content
