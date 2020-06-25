@@ -2,3 +2,23 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
+  activerecord:
+    attributes:
+      user: 
+        name: ユーザー名
+        password: パスワード
+        password_confirmation: パスワード（ 確認 ）
+      board:
+        tag_list: カテゴリ
+        name: 名前
+        title: タイトル
+        content: 本文
+      comment:
+        comment: コメント
+  views:
+    pagination:
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...

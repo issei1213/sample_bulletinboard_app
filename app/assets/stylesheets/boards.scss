@@ -1,3 +1,8 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Jquery-UIの不要な文字も非表示にする
+.ui-helper-hidden-accessible {
+  display: none;
+}

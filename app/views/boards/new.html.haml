@@ -1,0 +1,7 @@
+= render "shared/navbar"
+.container
+  .col
+    .row
+      = render "shared/error_message"
+  .col
+    = render partial: "form", locals: { board: @board }

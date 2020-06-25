@@ -2,8 +2,11 @@
 .container
   .col
     .row
+      = render "shared/alert_message"
+  .col
+    .row
       - @boards.each do |board|
-        .card.mt-2.w-100
+        .card.mt-2.mb-2.w-100
           .card-header
             .d-flex.justify-content-start
               .fisrt-justify-content
