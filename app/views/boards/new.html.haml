@@ -1,2 +1,7 @@
 = render "shared/navbar"
-%h1 新規投稿
+.container
+  .col
+    .row
+      = render "shared/error_message"
+  .col
+    = render partial: "form", locals: { board: @board }
