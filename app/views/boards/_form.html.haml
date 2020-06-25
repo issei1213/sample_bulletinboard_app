@@ -9,6 +9,8 @@
     .col-md-12.mb-3.mt-3
       = f.label :tag_list
       = f.text_field :tag_list, value: board.tag_list.join(','), class: "form-control", placeholder: "カンマ区切りで入力", required: true
+      .invalid-feedback
+        カテゴリを入力してください
   .form-row
     .col-md-12.mb-3.mt-3
       = f.label :content
