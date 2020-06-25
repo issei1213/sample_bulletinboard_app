@@ -3,6 +3,9 @@ ja:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
   activerecord:
+    model:
+      board: スレッド
+      comment: スレ
     attributes:
       user: 
         name: ユーザー名
