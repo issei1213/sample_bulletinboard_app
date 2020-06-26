@@ -21,11 +21,21 @@
               %p.card-text
                 = " 投稿者：#{@board.user.nickname}  投稿日：#{l @board.created_at}"
             .secpond-justify-content
-              = link_to "戻る", root_path, class: "btn btn-primary text-right"
+              = link_to "BACK", root_path, class: "btn btn-primary text-right"
   .col
     .row
-      .card.w-100.mt-3
-        .card-body
-          %h5.card-title Card title
-          %p.card-text With supporting text below as a natural lead-in to additional content.
+      - @comments.each.with_index do |comment, index|
+        .card.w-100.mt-3
+          .card-body
+            %h6.card-title
+              = "#{index + 1}:"
+              = comment.user.nickname
+              = "投稿日: #{l comment.created_at}"
+            %p.card-text
+              = simple_format(comment.comment)
 
+
+%nav.navbar.fixed-bottom.navbar-expand-lg.navbar-light{:style => "background-color: #cccccc;"}
+  = form_with model: [@board, @comment], local: true, html: { class: "needs-validation form-inline justify-content-center", novalidate: true, id: "form-width" } do |f|
+    = f.text_area :comment, rowa: 2, class: "form-control w-75", required: true
+    = f.submit "SEND", class: "btn btn-primary w-10 ml-3"
