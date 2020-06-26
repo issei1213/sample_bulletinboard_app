@@ -25,12 +25,12 @@
   .col
     .row.card-margin-buttom.js-ajax-card
       - @comments.each.with_index do |comment, index|
-        .card.w-100.mt-3.issei
+        .card.w-100.mt-3.comment{data: {comment: {id: comment.id}}}
           .card-body
             %h6.card-title
               = "#{index + 1}:"
-              - if current_user.id == comment.user.id
-                = "#{comment.user.nickname}(主)"
+              - if user_signed_in? && current_user.id == comment.user.id
+                = "#{comment.user.nickname}(main)"
               - else
                 = comment.user.nickname
             = "投稿日: #{l comment.created_at}"
