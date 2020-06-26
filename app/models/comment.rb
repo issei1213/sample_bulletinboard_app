@@ -22,4 +22,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :board
+
+  default_scope -> { order(created_at: :asc) }
 end

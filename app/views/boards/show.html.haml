@@ -23,19 +23,22 @@
             .secpond-justify-content
               = link_to "BACK", root_path, class: "btn btn-primary text-right"
   .col
-    .row
+    .row.card-margin-buttom.js-ajax-card
       - @comments.each.with_index do |comment, index|
-        .card.w-100.mt-3
+        .card.w-100.mt-3.issei
           .card-body
             %h6.card-title
               = "#{index + 1}:"
-              = comment.user.nickname
-              = "投稿日: #{l comment.created_at}"
+              - if current_user.id == comment.user.id
+                = "#{comment.user.nickname}(主)"
+              - else
+                = comment.user.nickname
+            = "投稿日: #{l comment.created_at}"
             %p.card-text
               = simple_format(comment.comment)
 
-
-%nav.navbar.fixed-bottom.navbar-expand-lg.navbar-light{:style => "background-color: #cccccc;"}
-  = form_with model: [@board, @comment], local: true, html: { class: "needs-validation form-inline justify-content-center", novalidate: true, id: "form-width" } do |f|
-    = f.text_area :comment, rowa: 2, class: "form-control w-75", required: true
-    = f.submit "SEND", class: "btn btn-primary w-10 ml-3"
+- if user_signed_in?
+  %nav.navbar.fixed-bottom.navbar-expand-lg.navbar-light{:style => "background-color: #cccccc;"}
+    = form_with model: [@board, @comment], local: true, html: { class: "needs-validation form-inline justify-content-center form-width-100", novalidate: true, id: "form-js-ajax" } do |f|
+      = f.text_area :comment, rowa: 2, class: "form-control w-75", required: true
+      = f.submit "SEND", class: "btn btn-primary w-10 ml-3", id: "form-send-button"
