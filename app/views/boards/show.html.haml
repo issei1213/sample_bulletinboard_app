@@ -19,7 +19,7 @@
               %h5.card-title
                 = simple_format(@board.content)
               %p.card-text
-                = "投稿者：issei  投稿日：#{l @board.created_at}"
+                = " 投稿者：#{@board.user.nickname}  投稿日：#{l @board.created_at}"
             .secpond-justify-content
               = link_to "戻る", root_path, class: "btn btn-primary text-right"
   .col

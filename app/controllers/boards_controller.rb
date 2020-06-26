@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  before_action :move_to_root, only: [:new]
+
   def index
     @boards = Board.page(params[:page]).per(8)
   end
@@ -24,6 +26,12 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :content, :tag_list)
+    params.require(:board).permit(:title, :content, :tag_list).merge(user_id: current_user.id)
+  end
+
+  def move_to_root
+    unless user_signed_in?
+      redirect_to root_path, notice: "ログインユーザーのみ投稿できます"
+    end
   end
 end

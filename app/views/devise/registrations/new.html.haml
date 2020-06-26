@@ -1,0 +1,55 @@
+.container.mt-5
+  .d-flex.justify-content-center.align-items-center.border.border-warning.rounded
+    .col-md-3.mt-3.pb-3
+      %h1 SIGN UP
+      %h6 新規アカウントの作成
+    .col-md-9.mt-3.pb-3
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "needs-validation", novalidate: true }) do |f|
+        = bootstrap_devise_error_messages!
+        .form-row
+          .col-md-4
+            = f.label :nickname
+            = f.text_field :nickname, autofocus: true, autocomplete: 'nickname', class: 'form-control', required: true
+            .invalid-feedback
+              ニックネームを入力してください
+          .col-md-8
+            = f.label :email
+            = f.email_field :email, autocomplete: 'email', class: 'form-control', required: true
+            .invalid-feedback
+              メールアドレスを入力してください
+        .form-row
+          .col-md-6
+            = f.label :password
+            = f.password_field :password, autocomplete: "current-password", class: 'form-control', required: true
+            .invalid-feedback
+              パスワードを入力してください
+          .col-md-6
+            = f.label :password_confirmation
+            = f.password_field :password_confirmation, autocomplete: "current-password", class: 'form-control', required: true
+            .invalid-feedback
+              パスワードを入力してください
+        .form-row
+          .col.mt-3
+            = link_to "HOME", root_path, class: 'btn btn-secondary'
+            = f.submit "SIGNUP", class: 'btn btn-primary'
+            
+
+
+-# デフォルト
+-# %h1= t('.sign_up')
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+-#   = bootstrap_devise_error_messages!
+-#   .form-group
+-#     = f.label :email
+-#     = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
+-#   .form-group
+-#     = f.label :password
+-#     = f.password_field :password, autocomplete: 'current-password', class: 'form-control'
+-#     - if @minimum_password_length
+-#       %small.form-text.text-muted= t('devise.shared.minimum_password_length', count: @minimum_password_length)
+-#   .form-group
+-#     = f.label :password_confirmation
+-#     = f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control'
+-#   .form-group
+-#     = f.submit t('.sign_up'), class: 'btn btn-primary'
+-# = render 'devise/shared/links'
