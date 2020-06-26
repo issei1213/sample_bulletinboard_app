@@ -8,7 +8,8 @@ ja:
       comment: スレ
     attributes:
       user: 
-        name: ユーザー名
+        nickname: ニックネーム
+        email: メールアドレス
         password: パスワード
         password_confirmation: パスワード（ 確認 ）
       board:
