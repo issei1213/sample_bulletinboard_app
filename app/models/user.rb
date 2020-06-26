@@ -23,6 +23,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable
 
   has_many :boards
+  has_many :comments
 
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :email, uniqueness: true, presence: true, format:  { with: VALID_EMAIL_REGEX }

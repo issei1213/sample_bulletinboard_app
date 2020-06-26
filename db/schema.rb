@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_25_123236) do
+ActiveRecord::Schema.define(version: 2020_06_26_052044) do
 
   create_table "boards", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title", default: "", null: false, collation: "utf8mb4_general_ci"
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 2020_06_25_123236) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_boards_on_user_id"
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "board_id"
+    t.string "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_comments_on_board_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -62,5 +72,7 @@ ActiveRecord::Schema.define(version: 2020_06_25_123236) do
   end
 
   add_foreign_key "boards", "users"
+  add_foreign_key "comments", "boards"
+  add_foreign_key "comments", "users"
   add_foreign_key "taggings", "tags"
 end
