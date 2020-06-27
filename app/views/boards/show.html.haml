@@ -21,7 +21,7 @@
               %p.card-text
                 = " 投稿者：#{@board.user.nickname}  投稿日：#{l @board.created_at}"
             .secpond-justify-content
-              = link_to "BACK", root_path, class: "btn btn-primary text-right"
+              = link_to "Back", root_path, class: "btn btn-primary text-right"
   .col
     .row.card-margin-buttom.js-ajax-card
       - @comments.each.with_index do |comment, index|
