@@ -2,7 +2,8 @@ class BoardsController < ApplicationController
   before_action :move_to_root, only: [:new]
 
   def index
-    @boards = Board.page(params[:page]).per(8)
+    @q = Board.ransack(params[:q])
+    @boards = @q.result(distinct: true).page(params[:page]).per(8)
   end
 
   def show

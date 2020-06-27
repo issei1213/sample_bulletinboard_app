@@ -24,14 +24,13 @@
             LOGIN
         %li.nav-item
           = link_to "SIGNUP", new_user_registration_path, class: "nav-link"
-
-
-    %form.form-inline.my-2.my-lg-0
-      %input.form-control.mr-sm-2{:placeholder => "Search", :type => "search"}/
-      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+    - unless request.fullpath.match(/.boards.\d/)
+      = search_form_for @q, html: { class: "form-inline my-2 my-lg-0" } do |f|
+        = f.search_field :title_or_content_cont, class: "form-control mr-sm-2", placeholder: "Thread"
+        = f.search_field :comments_comment_lteq, class: "form-control mr-sm-2", placeholder: "Responce"
+        = f.submit "SEARCH", class: "btn btn-outline-success my-2 my-sm-0"
 
 -# ログアウトモーダル表示
--# = render "devise/shared/sessions_new"
 #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
