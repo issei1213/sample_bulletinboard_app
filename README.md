@@ -32,8 +32,12 @@
   - 本番環境：AWS
 
 ## 使用技術詳細
-
+![エンジニア向けテスト](https://user-images.githubusercontent.com/59830008/85945656-371cbb80-b97a-11ea-95bf-00d58c16cf0c.jpg)
 
 ## DB設計
+![sample_bulletinboard_app_er](https://user-images.githubusercontent.com/59830008/85945515-4bac8400-b979-11ea-950b-075a4ae38cf0.jpg)
+
 
 ## システム構成図
+![sample_bulletinboard_app_aws](https://user-images.githubusercontent.com/59830008/85945521-56ffaf80-b979-11ea-893f-1fd608563e45.jpg)
+
