@@ -25,7 +25,7 @@
 ## ユーザ登録画面
 
 ## 使用技術概要
-  - 言語：Haml,SCSS,Ruby,jQuery
+  - 言語：Haml / SCSS / Ruby / jQuery
   - フレームワーク：Ruby on Rails
   - DB：mysql
   - 開発環境：Docker
