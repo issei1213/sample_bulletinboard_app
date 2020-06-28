@@ -14,6 +14,7 @@
 - テストアカウント:
   - 1.Email: test@gmail.com / Password: aaaa1111
   - 2.Email: test2@gmail.com / Password: bbbb2222
+  - 3.Email: test3@gmail.com / Password: cccc3333
 
 ## DEMO
 ## トップページ
