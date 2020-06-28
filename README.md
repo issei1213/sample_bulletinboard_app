@@ -16,13 +16,16 @@
   - 2.Email: test2@gmail.com / Password: bbbb2222
 
 ## DEMO
-## トップ画面
+## トップページ
 
-## 投稿画面
 
-## 編集画面
+## スレッド投稿画面
+![投稿画面](https://user-images.githubusercontent.com/59830008/85945969-2ec58000-b97c-11ea-8444-7bd638f63c69.jpg)
 
-## ユーザ登録画面
+## レス投稿画面
+
+## ユーザ新規登録画面
+![新規アカウント作成](https://user-images.githubusercontent.com/59830008/85945894-ad6ded80-b97b-11ea-8297-ea9a4ea75027.jpg)
 
 ## 使用技術概要
   - 言語：Haml / SCSS / Ruby / jQuery
