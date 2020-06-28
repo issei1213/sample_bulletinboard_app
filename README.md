@@ -1,24 +1,39 @@
-# README
+# アプリ名
+## SAMPLE_BULLETINBOARD_APP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 実装機能
+  * ログイン機能 (email + pass)
+  * 閲覧・投稿機能
+  * スレッド機能 (スレッドにレスをつけていくスタイル)
+  * カテゴリ(タグ)設定 (スレッドごと / 1つのスレッドに複数付与可能)
+  * 検索機能 (単語 / スレッド及びレスの横断検索)
 
-Things you may want to cover:
+## 本番環境（デプロイ先とテストアカウント＆ID）
+- GitHub:https://github.com/issei1213/it-dictionary
+- デプロイ先:http://18.182.143.52/
+- テストアカウント:
+  - 1.Email: test@gmail.com / Password: aaaa1111
+  - 2.Email: test2@gmail.com / Password: bbbb2222
 
-* Ruby version
+## DEMO
+## トップ画面
 
-* System dependencies
+## 投稿画面
 
-* Configuration
+## 編集画面
 
-* Database creation
+## ユーザ登録画面
 
-* Database initialization
+## 使用技術概要
+  - 言語：Haml,SCSS,Ruby,jQuery
+  - フレームワーク：Ruby on Rails
+  - DB：mysql
+  - 開発環境：Docker
+  - 本番環境：AWS
 
-* How to run the test suite
+## 使用技術詳細
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## DB設計
 
-* ...
+##　システム構成図
