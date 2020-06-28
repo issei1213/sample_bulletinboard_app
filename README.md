@@ -9,7 +9,7 @@
   * 検索機能 (単語 / スレッド及びレスの横断検索)
 
 ## 本番環境（デプロイ先とテストアカウント＆ID）
-- GitHub:https://github.com/issei1213/it-dictionary
+- GitHub:https://github.com/issei1213/sample_bulletinboard_app
 - デプロイ先:http://18.182.143.52/
 - テストアカウント:
   - 1.Email: test@gmail.com / Password: aaaa1111
