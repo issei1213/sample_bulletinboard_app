@@ -6,8 +6,8 @@ $(function(){
         <div class="card-body">
           <h6 class="card-title">
             ${comment.id}: ${comment.user_nickname}
-            投稿日: ${comment.created_at}
           </h6>
+          投稿日: ${comment.created_at}
           <p class="card-text"></p>
           <p>${comment.comment}</p>
           <p></p>
