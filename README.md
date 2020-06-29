@@ -17,15 +17,23 @@
 
 ## DEMO
 ## トップページ
+![SAMPLE_BULLETINBOARD_APP_top](https://user-images.githubusercontent.com/59830008/85989857-1a40c080-ba2c-11ea-878f-aeb6661086a6.jpg)
 
+## ユーザ新規登録画面
+![新規アカウント作成](https://user-images.githubusercontent.com/59830008/85945894-ad6ded80-b97b-11ea-8297-ea9a4ea75027.jpg)
+
+## ログインページ
+![SAMPLE_BULLETINBOARD_APP_login](https://user-images.githubusercontent.com/59830008/85990072-6986f100-ba2c-11ea-9100-711107a4ec44.jpg)
 
 ## スレッド投稿画面
 ![投稿画面](https://user-images.githubusercontent.com/59830008/85945969-2ec58000-b97c-11ea-8444-7bd638f63c69.jpg)
 
 ## レス投稿画面
+![result](https://user-images.githubusercontent.com/59830008/86021288-e71a2380-ba63-11ea-8339-aff10e27f4b3.gif)
 
-## ユーザ新規登録画面
-![新規アカウント作成](https://user-images.githubusercontent.com/59830008/85945894-ad6ded80-b97b-11ea-8297-ea9a4ea75027.jpg)
+## スレッド詳細画面
+![result](https://user-images.githubusercontent.com/59830008/86020601-14b29d00-ba63-11ea-8072-ee0f566a1176.gif)
+
 
 ## 使用技術概要
   - 言語：Haml / SCSS / Ruby / jQuery
