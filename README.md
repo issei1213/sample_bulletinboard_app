@@ -17,8 +17,8 @@
     * gem: ransackで実装
 
 ## デプロイ先とテストアカウント＆ID
-- GitHub:https://github.com/issei1213/sample_bulletinboard_app
-- デプロイ先:http://18.182.143.52/
+- GitHub: https://github.com/issei1213/sample_bulletinboard_app
+- デプロイ先: http://18.182.143.52/
 - テストアカウント:
   - 1.Email: test@gmail.com / Password: aaaa1111
   - 2.Email: test3@gmail.com / Password: cccc3333
