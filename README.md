@@ -3,7 +3,7 @@
 
 ## 実装機能
   * ログイン機能 (email + pass)
-    * gem:deviseで実装
+    * gem: deviseで実装
     * ログインページはBootstrapのモーダルで再現
   * 閲覧・投稿機能
     * 投稿機能はログインユーザーのみ可
