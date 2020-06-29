@@ -3,7 +3,7 @@
 # Table name: comments
 #
 #  id         :bigint           not null, primary key
-#  comment    :string(255)      not null
+#  comment    :string(255)      default(""), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  board_id   :bigint

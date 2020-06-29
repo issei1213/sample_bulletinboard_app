@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :content, :tag_list).merge(user_id: current_user.id)
+    params.require(:board).permit(:title, :content, :tag_list, :category_id).merge(user_id: current_user.id)
   end
 
   def move_to_root
