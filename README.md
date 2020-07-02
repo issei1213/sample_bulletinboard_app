@@ -16,7 +16,7 @@
   * 検索機能 (単語 / スレッド及びレスの横断検索)
     * gem: ransackで実装
 
-## デプロイ先とテストアカウント＆ID
+## デプロイ先とテストアカウント
 - GitHub: https://github.com/issei1213/sample_bulletinboard_app
 - デプロイ先: http://18.182.143.52/
 - テストアカウント:
