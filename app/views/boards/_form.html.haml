@@ -1,13 +1,24 @@
 = form_with(model: board, html: { class: "needs-validation", novalidate: true }, local: true) do |f|
   .form-row
     .col-md-12.mb-3.mt-3
+      = f.label :category, "カテゴリ"
+      .form-inline
+        = f.select :category_large, options_from_collection_for_select(User.all, :id, :nickname), {include_blank: "--"}, {class: 'form-control w-25'}
+        = f.select :category_middle, options_from_collection_for_select(User.all, :id, :nickname), {include_blank: "--"}, {class: 'form-control w-25 ml-3'}
+        = f.select :category_id, options_from_collection_for_select(User.all, :id, :nickname), {include_blank: "--"}, {class: 'form-control w-25 ml-3'}
+      -# = select :category_large,:category_large, options_from_collection_for_select(@categories.order("ancestry ASC").limit(13).order("id ASC"), :id, :name), {include_blank: "--"}, {class: 'sell-main__product-details__contents__category__lists'}
+      -# = select :category_middle,:category_middle, options_from_collection_for_select(@categories.limit(1), :id, :name),{}, {class: 'sell-main__product-details__contents__category__lists'}
+      -# = f.select :category_id, options_from_collection_for_select(@categories.limit(1), :id, :name),{}, {class: 'sell-main__product-details__contents__category__lists'}
+
+  .form-row
+    .col-md-12.mb-3.mt-3
       = f.label :title
       = f.text_field :title, class: "form-control", placeholder: "タイトルを入力", required: true
       .invalid-feedback
         タイトルを入力してください
   .form-row
     .col-md-12.mb-3.mt-3
-      = f.label :tag_list
+      = f.label :tag_list, "タグ"
       = f.text_field :tag_list, value: board.tag_list.join(','), class: "form-control", id: "article-tags", placeholder: "カンマ区切りで入力", required: true
       .invalid-feedback
         カテゴリを入力してください
